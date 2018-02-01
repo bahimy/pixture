@@ -1,0 +1,31 @@
+.navbar {
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  z-index: $z-index-navbar;
+  padding: .5em;
+  background-color: $color-crimson;
+  border: 1px solid $color-background;
+}
+
+.navbar__item {
+  list-style-type: none;
+}
+
+.navbar__link {
+  display: block;
+  height: 48px;
+  width: 100px;
+  padding: 1em .5em;
+  font-size: $font-delta;
+  text-decoration: none;
+  color: $color-canvas;
+  background-color: $color-background;
+  overflow: hidden;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: $color-canvas;
+    color: $color-background;
+  }
+}

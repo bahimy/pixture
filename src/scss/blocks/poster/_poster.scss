@@ -1,0 +1,145 @@
+.poster {
+  position: relative;
+  height: 100vh;
+}
+
+.poster__sidebar {
+  position: absolute;
+  width: 100vh;
+  height: 50px;
+  padding-left: 5em;
+  transform-origin: top left;
+  transform: rotate(-90deg) translate(-100%, 0px);
+  line-height: 2em;
+  text-transform: uppercase;
+  font-size: $font-epsilon;
+  font-weight: bold;
+  background-image: url("../images/leftwards.png");
+  background-repeat: no-repeat;
+}
+
+.poster__hamburger {
+  width: 50px;
+  height: 50px;
+  float: right;
+  transform: rotate(90deg);
+  padding: 10px;
+  background-color: $color-crimson;
+  fill: white;
+}
+
+.poster__sidebar-subcaption {
+  color: gray;
+  vertical-align: .07em;
+  font-size: .8em;
+}
+
+.poster__main {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: 50px;
+  background-color: $color-lining;
+}
+
+.poster__container {
+  position: absolute;
+  top: 25%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.poster__arrow {
+  padding-right: 5em;
+}
+
+.poster__title {
+  text-align: center;
+  font-size: 8em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.poster__title-junction {
+  font-size: .3em;
+  font-family: $font-serif;
+  font-weight: normal;
+  font-style: italic;
+  text-transform: none;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  display: block;
+  width: 4em;
+  height: 4em;
+  margin: 0 auto;
+  margin-top: -2em;
+  margin-bottom: -2em;
+  line-height: 3.8em;
+  border-radius: 2em;
+  background-color: $color-lining;
+
+  &:after {
+    content: '';
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    top: .3em;
+    left: .3em;
+    width: 3.4em;
+    height: 3.4em;
+    border: 0.3em solid white;
+    border-radius: 1.8em; 
+  }
+}
+
+.poster__caption,
+.poster__info {
+  position: absolute;
+  bottom: 5%;
+  display: inline-block;
+  width: 50%;
+  // border: 1px solid orange;
+}
+
+.poster__caption {
+  left: 0;
+}
+
+.poster__info {
+  right: 0;
+
+}
+
+.poster__header,
+.poster__text,
+.poster__menu,
+.poster__timestamp {
+  margin: 20px 20px;
+}
+
+.poster__header {
+  height: 20px;
+  font-size: $font-delta;
+}
+
+.poster__text {
+  height: 60px;
+  font-size: $font-epsilon;
+  line-height: 2;
+}
+
+.poster__menu {
+  height: 20px;
+  font-size: $font-delta;
+}
+
+.poster__timestamp {
+  height: 60px;
+  font-size: $font-epsilon;
+  text-align: right;
+}

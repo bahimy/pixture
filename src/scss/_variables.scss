@@ -1,0 +1,39 @@
+
+/* Colors */
+
+$color-deeppurple: rgb(18, 3, 36);
+$color-crimson: rgb(100, 0, 0);
+
+$color-canvas: white;
+$color-background: $color-deeppurple;
+$color-lining: $color-crimson;
+
+
+
+
+
+/* Typography */
+
+$font-sans: sans-serif;
+$font-serif: serif;
+
+// seed for sizes generator
+$font-initial-size: 4em;
+
+// fill array with proportional values
+$font-sizes: formTextSizes($font-initial-size);
+
+$font-alpha: nth($font-sizes, 1);
+$font-beta: nth($font-sizes, 2);
+$font-gamma: nth($font-sizes, 3);
+$font-delta: nth($font-sizes, 4);
+$font-epsilon: nth($font-sizes, 5);
+$font-zeta: nth($font-sizes, 6);
+
+
+
+
+
+/* Global z-indexes */
+
+$z-index-navbar: 1;
