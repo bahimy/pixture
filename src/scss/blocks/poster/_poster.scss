@@ -5,7 +5,7 @@
 
 .poster__sidebar {
   position: absolute;
-  z-index: 3;
+  z-index: $z-index-poster__sidebar;
   width: 100vh;
   height: 50px;
   padding-left: 5em;

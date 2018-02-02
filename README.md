@@ -7,3 +7,5 @@ Values for properties used through design defined as SCSS variables in "_variabl
 "_base.scs" - Applied to an element using an element selector, a descendent selector, or a child selector, along with any pseudo-classes. It doesn’t include any class or ID selectors. It is defining the default styling for how that element should look in all occurrences on the page.
 
 For each block there is a separate subdirectory in the "blocks" directory.
+
+Z-indexes are separeted into global and local indices. Global indices defined as global variables. Local indices defined at their blocks' codebase withing established local context.

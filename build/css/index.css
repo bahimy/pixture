@@ -454,7 +454,7 @@ html {
 
 .poster__sidebar {
   position: absolute;
-  z-index: 3;
+  z-index: 2;
   width: 100vh;
   height: 50px;
   padding-left: 5em;
