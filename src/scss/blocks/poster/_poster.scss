@@ -5,6 +5,7 @@
 
 .poster__sidebar {
   position: absolute;
+  z-index: 3;
   width: 100vh;
   height: 50px;
   padding-left: 5em;
@@ -24,8 +25,6 @@
   float: right;
   transform: rotate(90deg);
   padding: 10px;
-  background-color: $color-crimson;
-  fill: white;
 }
 
 .poster__sidebar-subcaption {

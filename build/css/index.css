@@ -406,18 +406,29 @@ html {
   font-size: 62.5%;
   font-family: sans-serif; }
 
+.u-removed {
+  display: none !important; }
+
+.u-bkgcolor-background {
+  background-color: #120324; }
+
+.u-bkgcolor-lining {
+  background-color: #640000; }
+
 .page__container {
   max-width: 1024px;
   margin: 0 auto; }
 
 .navbar {
   position: absolute;
-  top: 15px;
-  left: 25px;
+  top: 0;
+  left: 50px;
   z-index: 1;
   padding: .5em;
   background-color: #640000;
-  border: 1px solid #120324; }
+  border-bottom: 1px solid #120324;
+  border-right: 1px solid #120324;
+  margin: 0; }
 
 .navbar__item {
   list-style-type: none; }
@@ -443,6 +454,7 @@ html {
 
 .poster__sidebar {
   position: absolute;
+  z-index: 3;
   width: 100vh;
   height: 50px;
   padding-left: 5em;
@@ -463,9 +475,7 @@ html {
   float: right;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  padding: 10px;
-  background-color: #640000;
-  fill: white; }
+  padding: 10px; }
 
 .poster__sidebar-subcaption {
   color: gray;

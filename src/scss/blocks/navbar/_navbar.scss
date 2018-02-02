@@ -1,11 +1,13 @@
 .navbar {
   position: absolute;
-  top: 15px;
-  left: 25px;
+  top: 0;
+  left: 50px;
   z-index: $z-index-navbar;
   padding: .5em;
   background-color: $color-crimson;
-  border: 1px solid $color-background;
+  border-bottom: 1px solid $color-background;
+  border-right: 1px solid $color-background;
+  margin: 0;
 }
 
 .navbar__item {
