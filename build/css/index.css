@@ -415,6 +415,11 @@ html {
 .u-bkgcolor-lining {
   background-color: #640000; }
 
+.u-clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 .page__container {
   max-width: 1024px;
   margin: 0 auto; }
@@ -450,56 +455,51 @@ html {
 
 .poster {
   position: relative;
-  height: 100vh; }
+  padding-left: 50px;
+  background-color: #640000; }
 
 .poster__sidebar {
   position: absolute;
-  z-index: 2;
-  width: 100vh;
-  height: 50px;
-  padding-left: 5em;
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-  -webkit-transform: rotate(-90deg) translate(-100%, 0px);
-          transform: rotate(-90deg) translate(-100%, 0px);
-  line-height: 2em;
-  text-transform: uppercase;
-  font-size: 1.266em;
-  font-weight: bold;
-  background-image: url("../images/leftwards.png");
+  left: 0;
+  top: 0;
+  bottom: 0;
+  float: left;
+  width: 50px;
+  background-color: #120324;
+  background-image: url("../images/downwards.png");
+  background-position: bottom;
   background-repeat: no-repeat; }
 
 .poster__hamburger {
   width: 50px;
   height: 50px;
-  float: right;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  padding: 10px; }
+  padding: 10px;
+  cursor: pointer; }
+
+.poster__sidebar-caption {
+  position: absolute;
+  bottom: 10%;
+  left: 30%;
+  margin: 0;
+  font-size: 1.688em;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  white-space: nowrap; }
 
 .poster__sidebar-subcaption {
   color: gray;
-  vertical-align: .07em;
+  vertical-align: middle;
   font-size: .8em; }
 
-.poster__main {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin-left: 50px;
-  background-color: #640000; }
+.poster__mailto {
+  margin: 0;
+  padding: 15px;
+  text-align: right; }
 
-.poster__container {
-  position: absolute;
-  top: 25%;
-  right: 0;
-  left: 0;
-  bottom: 0; }
-
-.poster__arrow {
-  padding-right: 5em; }
+.poster__letter {
+  width: 28px; }
 
 .poster__title {
   text-align: center;
@@ -539,18 +539,13 @@ html {
     border: 0.3em solid white;
     border-radius: 1.8em; }
 
-.poster__caption,
-.poster__info {
-  position: absolute;
-  bottom: 5%;
-  display: inline-block;
+.poster__caption {
+  float: left;
   width: 50%; }
 
-.poster__caption {
-  left: 0; }
-
 .poster__info {
-  right: 0; }
+  float: left;
+  width: 50%; }
 
 .poster__header,
 .poster__text,
@@ -558,20 +553,30 @@ html {
 .poster__timestamp {
   margin: 20px 20px; }
 
-.poster__header {
-  height: 20px;
-  font-size: 1.688em; }
+.poster__header,
+.poster__menu {
+  height: 48px;
+  font-size: 1.688em;
+  line-height: 48px; }
 
 .poster__text {
   height: 60px;
   font-size: 1.266em;
-  line-height: 2; }
-
-.poster__menu {
-  height: 20px;
-  font-size: 1.688em; }
+  line-height: 2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
 
 .poster__timestamp {
   height: 60px;
   font-size: 1.266em;
   text-align: right; }
+
+.poster__tridot {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  width: 48px;
+  height: 48px; }
