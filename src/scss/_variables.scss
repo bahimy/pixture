@@ -3,10 +3,14 @@
 
 $color-deeppurple: rgb(18, 3, 36);
 $color-crimson: rgb(100, 0, 0);
+$color-gray: rgb(220, 220, 220);
+$color-black: rgb(0, 0, 0);
 
 $color-canvas: white;
 $color-background: $color-deeppurple;
 $color-lining: $color-crimson;
+$color-muted: $color-gray;
+$color-strong: $color-black;
 
 
 
@@ -35,6 +39,3 @@ $font-zeta: nth($font-sizes, 6);
 
 
 /* Global z-indexes */
-
-$z-index-navbar: 1;
-$z-index-poster__sidebar: 2;

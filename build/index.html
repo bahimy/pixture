@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pixture</title>
   <link rel="stylesheet" href="./css/index.css" type="text/css">
 </head>
@@ -33,16 +34,29 @@
     </div>
   </div>
 
-  <h2>Pictures worth seeing</h2>
-  <ol>
-    <li>
-      <div>
-        <img src="#" alt="" />
-        <h4>Decayed</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-    </li>
-  </ol>
+  <div class="gallery">
+    <h2 class="gallery__header">Pictures worth seeing</h2>
+    <ol class="gallery__container">
+      <li class="gallery__item">
+        <div class="card">
+          <div class="card__image">
+            <p class="card__likes"><a href="#"><img class="card__heart" src="./images/heart.svg" alt="heart" /></a>134</p>
+          </div>
+          <div class="card__content">
+            <div class="card__text">
+              <h4 class="card__header">Decayed</h4>
+              <p class="card__note">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="card__footer u-clearfix">
+              <a class="card__comments" href="#"><img class="card__speech" src="./images/speechballoon.svg" alt="heart" />374 comments</a>
+              <a class="card__tridot" href="#">&hellip;</a>
+            </div>
+          </div>
+        </div><!-- End of card -->
+      </li>
+    </ol>
+  </div>
+
   <h1>It's your only passion</h1>
   <h4>Texture makes art</h4>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>

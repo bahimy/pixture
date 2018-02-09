@@ -2,6 +2,7 @@
   position: relative;
   padding-left: 50px;
   background-color: $color-crimson;
+  height: 100vh;
 }
 
 .poster__sidebar {
@@ -43,6 +44,7 @@
 
 .poster__mailto {
   margin: 0;
+  margin-bottom: 300px;
   padding: 15px;
   text-align: right;
 }
@@ -52,6 +54,10 @@
 }
 
 .poster__title {
+  position: absolute;
+  top: 30%;
+  right: 0;
+  left: 50px;
   text-align: center;
   font-size: 8em;
   font-weight: bold;
@@ -93,13 +99,16 @@
 }
 
 .poster__caption {
-  float: left;
-  width: 50%;
+  position: absolute;
+  bottom: 0;
+  width: 48%;
 }
 
 .poster__info {
-  float: left;
-  width: 50%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 48%;
 }
 
 .poster__header,
@@ -117,22 +126,19 @@
 }
 
 .poster__text {
-  height: 60px;
+  height: 80px;
   font-size: $font-epsilon;
   line-height: 2;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .poster__timestamp {
-  height: 60px;
+  height: 80px;
   font-size: $font-epsilon;
   text-align: right;
 }
 
 .poster__tridot {
-  display: block;
+  display: inline-block;
   text-align: center;
   text-decoration: none;
   font-weight: bold;

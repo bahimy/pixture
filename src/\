@@ -1,0 +1,42 @@
+.card {
+  max-width: 100%;
+  // border: 1px dashed cyan;
+  background-color: white;
+  background-clip: padding-box;
+}
+
+.card__image {
+  padding-top: 40%;
+  background: url("../images/corner_01.png") bottom left no-repeat,
+    url("../images/clouds.jpg") 0 0/cover;
+}
+
+.card__likes {
+  font-size: $font-epsilon;
+  text-align: right;
+  padding: 0.5em;
+  margin: 0;
+}
+
+.card__heart {
+  height: 1.2em;
+  vertical-align: bottom;
+}
+
+.card__content {
+  color: black;
+  padding: 1em;
+  background: url("../images/corner_02.png") top left no-repeat;
+}
+
+.card__header {
+  font-size: $font-delta;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin: 0.7em 0;
+}
+
+.card__note {
+  line-height: 1.5;
+}
