@@ -18,8 +18,8 @@ $color-strong: $color-black;
 
 /* Typography */
 
-$font-sans: sans-serif;
-$font-serif: serif;
+$font-sans: tahoma, sans-serif;
+$font-serif: georgia, serif;
 
 // seed for sizes generator
 $font-initial-size: 4em;
@@ -39,3 +39,6 @@ $font-zeta: nth($font-sizes, 6);
 
 
 /* Global z-indexes */
+
+$z-poster: 1;
+$z-navbar: 2;

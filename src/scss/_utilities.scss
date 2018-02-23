@@ -3,15 +3,31 @@
 }
 
 .u-bkgcolor-background {
-  background-color: $color-background;
+  background-color: $color-background !important;
 }
 
 .u-bkgcolor-lining {
-  background-color: $color-lining;
+  background-color: $color-lining !important;
 }
 
 .u-clearfix:after {
   content: "";
   display: table;
   clear: both;
+}
+
+.u-hidden-overflow {
+  overflow: hidden !important;
+}
+
+.u-inline-block {
+  display: inline-block !important;
+}
+
+.u-block {
+  display: block !important;
+}
+
+.u-absolute {
+  position: absolute !important;
 }

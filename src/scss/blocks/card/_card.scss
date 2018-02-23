@@ -3,6 +3,7 @@
   background-color: white;
   background-clip: padding-box;
   font-size: $font-epsilon;
+  white-space: normal;
 }
 
 .card__image {
@@ -51,28 +52,43 @@
 }
 
 .card__content {
+  position: relative;
   color: $color-strong;
   background: url("../images/corner_02.png") top left no-repeat;
+
+  &:before {
+    content: "";
+    display: block;
+    padding-top: 70%;
+  }
 }
 
 .card__text {
-  padding: 1em 2em;
+  position: absolute;
+  top: 0;
+  padding: 1em 3em;
 }
 
 .card__header {
-  font-size: $font-gamma;
+  font-size: $font-delta;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.07em;
-  margin: 0.7em 0;
+  margin: 1em 0 0.7em;
 }
 
 .card__note {
+  font-size: $font-epsilon;
   line-height: 1.5;
 }
 
 .card__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   border-top: 1px solid $color-muted;
+  font-weight: bold;
 }
 
 .card__speech {
@@ -85,14 +101,15 @@
   display: block;
   height: 50px;
   text-decoration: none;
+  line-height: 50px;
   float: left;
   border-right: 1px solid $color-muted;
   vertical-align: top;
-  padding: 1.2em;
+  padding: 0 1.2em;
   color: $color-strong;
 }
 
-.card__tridot {
+.card__menu {
   display: block;
   height: 50px;
   padding: 0 .5em;

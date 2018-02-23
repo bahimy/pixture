@@ -8,4 +8,6 @@ Values for properties used through design defined as SCSS variables in "_variabl
 
 For each block there is a separate subdirectory in the "blocks" directory.
 
-Z-indexes are separeted into global and local indices. Global indices defined as global variables. Local indices defined at their blocks' codebase withing established local context.
+Z-indexes are separeted into global and local indices. Global indices are defined as global variables. Local indices are defined at their stylesheet withing local context.
+
+Media queries are defined separetely.

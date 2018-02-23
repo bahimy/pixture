@@ -1,7 +1,25 @@
+@media screen and (max-width: 999px) {
+  @import './blocks/gallery/medias/_w999.scss';
+}
+
 @media screen and (max-width: 699px) {
-  @import './blocks/poster/medias/_699.scss';
+  @import './blocks/poster/medias/_w699.scss';
+}
+
+@media screen and (max-width: 599px) {
+  @import './blocks/gallery/medias/_w599.scss';
 }
 
 @media screen and (max-width: 499px) {
-  @import './blocks/poster/medias/_499.scss';
+  @import './blocks/poster/medias/_w499.scss';
+}
+
+@media screen and (max-width: 399px) {
+  @import './blocks/card/medias/_w399.scss';
+}
+
+@media screen and (orientation: landscape) and
+  (max-height: 699px) and
+  (max-width: 699px) {
+  @import './blocks/poster/medias/_h699.scss';
 }

@@ -1,5 +1,6 @@
 .navbar {
   position: absolute;
+  z-index: $z-navbar;
   top: 0;
   left: 50px;
   padding: .5em;

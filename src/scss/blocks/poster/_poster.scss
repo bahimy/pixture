@@ -1,5 +1,6 @@
 .poster {
   position: relative;
+  z-index: $z-poster;
   padding-left: 50px;
   background-color: $color-crimson;
   height: 100vh;
@@ -62,6 +63,7 @@
   font-size: 8em;
   font-weight: bold;
   text-transform: uppercase;
+  letter-spacing: .08em;
   margin: 0;
 }
 
@@ -73,6 +75,7 @@
   text-transform: none;
   position: relative;
   text-align: center;
+  letter-spacing: normal;
   vertical-align: middle;
   display: block;
   width: 4em;

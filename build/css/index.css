@@ -404,21 +404,36 @@ html {
   background-color: #120324;
   color: white;
   font-size: 62.5%;
-  font-family: sans-serif; }
+  font-family: tahoma, sans-serif; }
 
 .u-removed {
   display: none !important; }
 
 .u-bkgcolor-background {
-  background-color: #120324; }
+  background-color: #120324 !important; }
 
 .u-bkgcolor-lining {
-  background-color: #640000; }
+  background-color: #640000 !important; }
 
 .u-clearfix:after {
   content: "";
   display: table;
   clear: both; }
+
+.u-hidden-overflow {
+  overflow: hidden !important; }
+
+.u-inline-block {
+  display: inline-block !important; }
+
+.u-block {
+  display: block !important; }
+
+.u-absolute {
+  position: absolute !important; }
+
+.page {
+  font-family: tahoma, sans-serif; }
 
 .page__container {
   max-width: 1024px;
@@ -426,6 +441,7 @@ html {
 
 .navbar {
   position: absolute;
+  z-index: 2;
   top: 0;
   left: 50px;
   padding: .5em;
@@ -454,6 +470,7 @@ html {
 
 .poster {
   position: relative;
+  z-index: 1;
   padding-left: 50px;
   background-color: #640000;
   height: 100vh; }
@@ -511,16 +528,18 @@ html {
   font-size: 8em;
   font-weight: bold;
   text-transform: uppercase;
+  letter-spacing: .08em;
   margin: 0; }
 
 .poster__title-junction {
   font-size: .3em;
-  font-family: serif;
+  font-family: georgia, serif;
   font-weight: normal;
   font-style: italic;
   text-transform: none;
   position: relative;
   text-align: center;
+  letter-spacing: normal;
   vertical-align: middle;
   display: block;
   width: 4em;
@@ -586,11 +605,57 @@ html {
   width: 48px;
   height: 48px; }
 
+.gallery {
+  padding: 0 10px;
+  position: relative;
+  max-width: 1024px;
+  margin: 0 auto; }
+
+.gallery__header {
+  margin: 2em 0 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 1.688em; }
+
+.gallery__container {
+  list-style: none;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  overflow: hidden; }
+
+.gallery__item {
+  padding: 0 2em 1em;
+  width: 33%; }
+
+.gallery__previous {
+  position: absolute;
+  top: 25%;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background: no-repeat url("../images/arrow_left.svg") center/contain; }
+
+.gallery__next {
+  position: absolute;
+  top: 25%;
+  right: 2px;
+  width: 24px;
+  height: 24px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  cursor: pointer;
+  background: no-repeat url("../images/arrow_right.svg") center/contain; }
+
 .card {
   max-width: 100%;
   background-color: white;
   background-clip: padding-box;
-  font-size: 1.266em; }
+  font-size: 1.266em;
+  white-space: normal; }
 
 .card__image {
   padding-top: 40%;
@@ -631,24 +696,37 @@ html {
   margin-right: .5em; }
 
 .card__content {
+  position: relative;
   color: black;
   background: url("../images/corner_02.png") top left no-repeat; }
+  .card__content:before {
+    content: "";
+    display: block;
+    padding-top: 70%; }
 
 .card__text {
-  padding: 1em 2em; }
+  position: absolute;
+  top: 0;
+  padding: 1em 3em; }
 
 .card__header {
-  font-size: 2.25em;
+  font-size: 1.688em;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.07em;
-  margin: 0.7em 0; }
+  margin: 1em 0 0.7em; }
 
 .card__note {
+  font-size: 1.266em;
   line-height: 1.5; }
 
 .card__footer {
-  border-top: 1px solid gainsboro; }
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid gainsboro;
+  font-weight: bold; }
 
 .card__speech {
   height: 1.8em;
@@ -659,13 +737,14 @@ html {
   display: block;
   height: 50px;
   text-decoration: none;
+  line-height: 50px;
   float: left;
   border-right: 1px solid gainsboro;
   vertical-align: top;
-  padding: 1.2em;
+  padding: 0 1.2em;
   color: black; }
 
-.card__tridot {
+.card__menu {
   display: block;
   height: 50px;
   padding: 0 .5em;
@@ -676,12 +755,17 @@ html {
   background-color: gainsboro;
   color: black; }
 
+@media screen and (max-width: 999px) {
+  .gallery__item {
+    padding: 0 2em 1em;
+    width: 50%; } }
+
 @media screen and (max-width: 699px) {
   .poster__mailto {
     margin-bottom: 330px; }
   .poster__title {
     top: 20%;
-    left: 65px;
+    left: 70px;
     text-align: left;
     font-size: 8em;
     font-weight: bold;
@@ -721,7 +805,33 @@ html {
     text-align: right;
     font-size: 3em; } }
 
+@media screen and (max-width: 599px) {
+  .gallery__item {
+    padding: 0 2em 1em;
+    width: 100%; } }
+
 @media screen and (max-width: 499px) {
   .poster__title {
     top: 25%;
     font-size: 5em; } }
+
+@media screen and (max-width: 399px) {
+  .card__content::before {
+    padding-top: 80%; }
+  .card__text {
+    padding: 1em 2em; }
+  .card__header {
+    font-size: 1.266em; }
+  .card__note {
+    font-size: 0.949em; }
+  .card__comments {
+    height: 30px;
+    line-height: 30px; }
+  .card__menu {
+    height: 30px;
+    font-size: 1.688em; } }
+
+@media screen and (orientation: landscape) and (max-height: 699px) and (max-width: 699px) {
+  .poster__title {
+    top: 10%;
+    font-size: 4em; } }
