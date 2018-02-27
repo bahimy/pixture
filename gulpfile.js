@@ -13,7 +13,7 @@ var gulp = require('gulp'),
     mqpacker = require('css-mqpacker'),
     cssnano = require('cssnano'),
 
-    // Using in "if" branching to produce dev/prod output
+    // Using an "if" branching to produce dev/prod output
     devBuild = true, // (process.env.NODE_ENV !== 'production')
 
     folder = {

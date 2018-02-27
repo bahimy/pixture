@@ -1,0 +1,19 @@
+.text {
+  position: relative;
+  margin: 3em 10% 3em 70px;
+  font-size: $font-epsilon;
+  column-count: 2;
+}
+
+.text__paragraph:nth-child(2) {
+  margin-top: 0;
+}
+
+.text__time {
+  position: absolute;
+  transform: rotate(-90deg);
+  left: -70px;
+  bottom: 50%;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}

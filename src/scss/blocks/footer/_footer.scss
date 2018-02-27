@@ -1,0 +1,34 @@
+.footer {
+  font-size: $font-epsilon;
+}
+
+.footer__column {
+  float: left;
+  padding: 1em;
+}
+
+.footer__column--50p {
+  width: 50%;
+}
+
+.footer__column--25p {
+  width: 25%;
+}
+
+.footer__header {
+  color: $color-sporadic;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: normal;
+}
+
+.footer__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: $color-canvas;
+  line-height: 2em;
+}

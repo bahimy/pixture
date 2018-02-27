@@ -1,0 +1,19 @@
+.signature {
+  background-color: $color-lining;
+  padding: 10em 0;
+  padding-left: 40%;
+  padding-right: 10px;
+  font-size: $font-epsilon;
+}
+
+.signature__caption {
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: bold;
+  margin: .5em 0;
+}
+
+.signature__name {
+  font-size: $font-delta;
+  margin-top: 0;
+}

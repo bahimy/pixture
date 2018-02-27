@@ -1,0 +1,15 @@
+.topics {
+  font-size: $font-epsilon;
+  margin: 3em 10% 3em 70px;
+}
+
+.topics__item {
+  display: inline-block;
+  width: 22.75%;
+  margin-top: 1em;
+  margin-right: 3%;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

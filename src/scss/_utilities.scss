@@ -31,3 +31,19 @@
 .u-absolute {
   position: absolute !important;
 }
+
+.u-transparent {
+  opacity: .3 !important;
+}
+
+.u-shadowed:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  right: -3px;
+  bottom: -3px;
+  z-index: -1;
+  background-color: $color-strong;
+}

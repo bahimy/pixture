@@ -1,9 +1,14 @@
 .poster {
   position: relative;
-  z-index: $z-poster;
   padding-left: 50px;
   background-color: $color-crimson;
   height: 100vh;
+}
+
+.poster--sub {
+  padding: 50px 10px;
+  background-color: $color-crimson;
+  padding-left: 50px;
 }
 
 .poster__sidebar {
@@ -45,7 +50,7 @@
 
 .poster__mailto {
   margin: 0;
-  margin-bottom: 300px;
+  // margin-bottom: 300px;
   padding: 15px;
   text-align: right;
 }
@@ -59,12 +64,24 @@
   top: 30%;
   right: 0;
   left: 50px;
+  bottom: 30%;
+  overflow: hidden;
   text-align: center;
   font-size: 8em;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: .08em;
   margin: 0;
+}
+
+.poster__title--sub {
+  overflow: hidden;
+  text-align: center;
+  font-size: 8em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin: .8em 0;
 }
 
 .poster__title-junction {
@@ -107,6 +124,12 @@
   width: 48%;
 }
 
+.poster__caption--sub {
+  width: auto;
+  text-align: left;
+  margin: 2.5em 20px;
+}
+
 .poster__info {
   position: absolute;
   right: 0;
@@ -132,6 +155,18 @@
   height: 80px;
   font-size: $font-epsilon;
   line-height: 2;
+}
+
+.poster__header--sub {
+  font-size: $font-delta;
+  margin-bottom: .6em;
+  line-height: normal;
+}
+
+.poster__text--sub {
+  font-size: $font-epsilon;
+  height: auto;
+  line-height: normal;
 }
 
 .poster__timestamp {

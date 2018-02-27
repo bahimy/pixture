@@ -2,6 +2,11 @@
   @import './blocks/gallery/medias/_w999.scss';
 }
 
+@media screen and (max-width: 799px) {
+  @import './blocks/text/medias/_w799.scss';
+  @import './blocks/topics/medias/_w799.scss';
+}
+
 @media screen and (max-width: 699px) {
   @import './blocks/poster/medias/_w699.scss';
 }
@@ -12,10 +17,8 @@
 
 @media screen and (max-width: 499px) {
   @import './blocks/poster/medias/_w499.scss';
-}
-
-@media screen and (max-width: 399px) {
-  @import './blocks/card/medias/_w399.scss';
+  @import './blocks/topics/medias/_w499.scss';
+  @import './blocks/signature/medias/_w499.scss';
 }
 
 @media screen and (orientation: landscape) and

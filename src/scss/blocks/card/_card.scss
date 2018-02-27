@@ -120,3 +120,31 @@
   background-color: $color-muted;
   color: $color-strong;
 }
+
+// card.js adds '.card-narrow' class dynamically
+
+.card-narrow .card__content::before {
+  padding-top: 80%;
+}
+
+.card-narrow .card__text {
+  padding: 1em 2em;
+}
+
+.card-narrow .card__header {
+  font-size: $font-epsilon;
+}
+
+.card-narrow .card__note {
+  font-size: $font-zeta;
+}
+
+.card-narrow .card__comments {
+  height: 30px;
+  line-height: 30px;
+}
+
+.card-narrow .card__menu {
+  height: 30px;
+  font-size: $font-delta;
+}

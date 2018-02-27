@@ -1,0 +1,8 @@
+.topics__item {
+  width: 45%;
+  margin-right: 5%;
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+}

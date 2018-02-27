@@ -432,25 +432,50 @@ html {
 .u-absolute {
   position: absolute !important; }
 
+.u-transparent {
+  opacity: .3 !important; }
+
+.u-shadowed:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  right: -3px;
+  bottom: -3px;
+  z-index: -1;
+  background-color: black; }
+
 .page {
   font-family: tahoma, sans-serif; }
 
 .page__container {
+  position: relative;
   max-width: 1024px;
   margin: 0 auto; }
 
 .navbar {
   position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 50px;
-  padding: .5em;
-  background-color: #640000;
-  border-bottom: 1px solid #120324;
-  border-right: 1px solid #120324;
+  display: inline-block;
+  z-index: 1;
+  left: 0;
+  right: 0; }
+
+.navbar__toggler {
+  position: absolute;
+  left: 0;
+  right: 0;
+  float: left;
+  background-color: #120324; }
+
+.navbar__menu {
+  position: absolute;
+  left: 100%;
+  display: inline-block;
+  padding: 0;
   margin: 0; }
 
-.navbar__item {
+.navbar__element {
   list-style-type: none; }
 
 .navbar__link {
@@ -470,10 +495,14 @@ html {
 
 .poster {
   position: relative;
-  z-index: 1;
   padding-left: 50px;
   background-color: #640000;
   height: 100vh; }
+
+.poster--sub {
+  padding: 50px 10px;
+  background-color: #640000;
+  padding-left: 50px; }
 
 .poster__sidebar {
   position: absolute;
@@ -512,7 +541,6 @@ html {
 
 .poster__mailto {
   margin: 0;
-  margin-bottom: 300px;
   padding: 15px;
   text-align: right; }
 
@@ -524,12 +552,23 @@ html {
   top: 30%;
   right: 0;
   left: 50px;
+  bottom: 30%;
+  overflow: hidden;
   text-align: center;
   font-size: 8em;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: .08em;
   margin: 0; }
+
+.poster__title--sub {
+  overflow: hidden;
+  text-align: center;
+  font-size: 8em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin: .8em 0; }
 
 .poster__title-junction {
   font-size: .3em;
@@ -568,6 +607,11 @@ html {
   bottom: 0;
   width: 48%; }
 
+.poster__caption--sub {
+  width: auto;
+  text-align: left;
+  margin: 2.5em 20px; }
+
 .poster__info {
   position: absolute;
   right: 0;
@@ -590,6 +634,16 @@ html {
   height: 80px;
   font-size: 1.266em;
   line-height: 2; }
+
+.poster__header--sub {
+  font-size: 1.688em;
+  margin-bottom: .6em;
+  line-height: normal; }
+
+.poster__text--sub {
+  font-size: 1.266em;
+  height: auto;
+  line-height: normal; }
 
 .poster__timestamp {
   height: 80px;
@@ -755,10 +809,123 @@ html {
   background-color: gainsboro;
   color: black; }
 
+.card-narrow .card__content::before {
+  padding-top: 80%; }
+
+.card-narrow .card__text {
+  padding: 1em 2em; }
+
+.card-narrow .card__header {
+  font-size: 1.266em; }
+
+.card-narrow .card__note {
+  font-size: 0.949em; }
+
+.card-narrow .card__comments {
+  height: 30px;
+  line-height: 30px; }
+
+.card-narrow .card__menu {
+  height: 30px;
+  font-size: 1.688em; }
+
+.button--navbar {
+  cursor: pointer;
+  border: none;
+  background: url("../images/hamburger.svg") center no-repeat;
+  width: 100%;
+  height: 50px; }
+
+.text {
+  position: relative;
+  margin: 3em 10% 3em 70px;
+  font-size: 1.266em;
+  -webkit-column-count: 2;
+          column-count: 2; }
+
+.text__paragraph:nth-child(2) {
+  margin-top: 0; }
+
+.text__time {
+  position: absolute;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  left: -70px;
+  bottom: 50%;
+  text-transform: uppercase;
+  letter-spacing: .08em; }
+
+.topics {
+  font-size: 1.266em;
+  margin: 3em 10% 3em 70px; }
+
+.topics__item {
+  display: inline-block;
+  width: 22.75%;
+  margin-top: 1em;
+  margin-right: 3%; }
+  .topics__item:last-child {
+    margin-right: 0; }
+
+.signature {
+  background-color: #640000;
+  padding: 10em 0;
+  padding-left: 40%;
+  padding-right: 10px;
+  font-size: 1.266em; }
+
+.signature__caption {
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: bold;
+  margin: .5em 0; }
+
+.signature__name {
+  font-size: 1.688em;
+  margin-top: 0; }
+
+.footer {
+  font-size: 1.266em; }
+
+.footer__column {
+  float: left;
+  padding: 1em; }
+
+.footer__column--50p {
+  width: 50%; }
+
+.footer__column--25p {
+  width: 25%; }
+
+.footer__header {
+  color: #5da6af;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: normal; }
+
+.footer__list {
+  list-style-type: none;
+  padding: 0; }
+
+.footer__link {
+  text-decoration: none;
+  color: white;
+  line-height: 2em; }
+
 @media screen and (max-width: 999px) {
   .gallery__item {
     padding: 0 2em 1em;
     width: 50%; } }
+
+@media screen and (max-width: 799px) {
+  .text {
+    -webkit-column-count: auto;
+            column-count: auto; }
+  .topics__item {
+    width: 45%;
+    margin-right: 5%; }
+    .topics__item:nth-child(2n) {
+      margin-right: 0; } }
 
 @media screen and (max-width: 699px) {
   .poster__mailto {
@@ -771,6 +938,10 @@ html {
     font-weight: bold;
     text-transform: uppercase;
     margin: 0; }
+  .poster__title--sub {
+    font-size: 6em;
+    font-weight: bold;
+    text-transform: uppercase; }
   .poster__title-junction {
     font-size: 1em;
     font-family: inherit;
@@ -813,23 +984,15 @@ html {
 @media screen and (max-width: 499px) {
   .poster__title {
     top: 25%;
-    font-size: 5em; } }
-
-@media screen and (max-width: 399px) {
-  .card__content::before {
-    padding-top: 80%; }
-  .card__text {
-    padding: 1em 2em; }
-  .card__header {
-    font-size: 1.266em; }
-  .card__note {
-    font-size: 0.949em; }
-  .card__comments {
-    height: 30px;
-    line-height: 30px; }
-  .card__menu {
-    height: 30px;
-    font-size: 1.688em; } }
+    font-size: 5em; }
+  .poster__title--sub {
+    top: 25%;
+    font-size: 5em; }
+  .topics__item {
+    width: 100%;
+    margin-right: 0; }
+  .signature {
+    padding-left: 50px; } }
 
 @media screen and (orientation: landscape) and (max-height: 699px) and (max-width: 699px) {
   .poster__title {
