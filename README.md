@@ -1,13 +1,17 @@
+### Pixture
+HTML Academy practice project
+
+##Legal notes
+If there are any legal issues with content of the project, please send me a message. I will remove controversial items instantly.
+
+##Project requirements
+To work on the project you need Node.js and npm.
 Modules are excluded. When deploying the project to another PC, you can run "npm install" to restore them.
 
-Style convention
+##Project data
+#Styling
+Global values for properties used through design defined as SCSS variables in "_variables.scss".
 
-Values for properties used through design defined as SCSS variables in "_variables.scss"
+For each block there is a separate subdirectory in the "blocks" directory. That subdirectory contains "medias" folder for storing @media rules. "_media.scss" sticks @media rules together.
 
-"_base.scs" - Applied to an element using an element selector, a descendent selector, or a child selector, along with any pseudo-classes. It doesn’t include any class or ID selectors. It is defining the default styling for how that element should look in all occurrences on the page.
-
-For each block there is a separate subdirectory in the "blocks" directory.
-
-Z-indexes are separeted into global and local indices. Global indices are defined as global variables. Local indices are defined at their stylesheet withing local context.
-
-Media queries are defined separetely.
+There are global and local z-indexes. Global indexes are defined as global variables. Local indexes are defined at their respective stylesheet withing local context.
